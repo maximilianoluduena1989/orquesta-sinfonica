@@ -1,0 +1,19 @@
+.bgr_image-2 {
+    background-image: url(../multimedia/banerservi/imagen2.webp);
+    background-position: 40%;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        background: rgb(255, 197, 7);
+        opacity: 0.3;
+    }
+}

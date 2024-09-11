@@ -1,0 +1,65 @@
+ 
+header {
+    background-color: $header-principal;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    z-index: 1000;
+
+    position: sticky;
+    top: 0;
+
+
+    .logo {
+        max-width: 150px;
+        margin-right: auto;
+        z-index: 222;
+    }
+
+
+    .menu-icon {
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            margin: 0;
+
+            .menu__item {
+                position: relative;
+
+                
+                a {
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                    padding: 10px;
+                    font-size: 1.2rem;
+                    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    transition: color 0.3s ease;
+                    display: block;
+                    overflow: hidden;
+
+
+
+                }
+            }
+        }
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+}
+
+

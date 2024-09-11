@@ -1,0 +1,15 @@
+@mixin image ($widht, $hight, $objet){
+    width: $widht;
+    height: $hight;
+    object-fit: $objet;
+ 
+ }
+ 
+  @mixin display($direction, $aling, $justify){
+   display: flex;
+    flex-direction: $direction;
+    align-items: $aling;
+    justify-content: $justify;
+    
+  }
+  

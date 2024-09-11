@@ -1,0 +1,217 @@
+ 
+.contenedor__productos-index {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    gap: 10px;
+    margin: 10px;
+
+    .productos__card-index {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        color: $color-inicio;
+
+        overflow: hidden;
+        border-radius: 5px;
+        cursor: pointer;
+        flex: 1;
+        
+        .productos__img-index {
+
+            @include image (100%, 100%, cover);
+
+            &:hover {
+                transform: scale(1.1);
+               filter: brightness(120%);
+                transition: .5s;
+
+            }
+        }
+
+        .producto__informacion-index {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            
+            right: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: $color-bgr;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            z-index: 2;
+        }
+
+
+
+    }
+
+}
+
+.bgr_image {
+    position: relative;
+    height: 50vh;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../multimedia/orquesta/orquesta/bnr.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: blur(1px);
+        background-size: cover;
+        width: 100%;
+        height: 50vh;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: rgba(236, 213, 0, 0.862);
+        opacity: 0.3;
+
+        top: 0;
+        width: 100%;
+        height: 50vh;
+        z-index: 1;
+    }
+}
+
+.primer-parrafo {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+
+    p {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 15px 15px;
+        width: 60%;
+        text-align: center;
+        font-size: 17px;
+        line-height: 50px;
+    }
+
+    .video-yo {
+        display: flex;
+
+        video {
+            @include image (900px, 65vh, cover);
+            object-position: 0% 70%;
+
+        }
+    }
+}
+
+.segundo-parrafo {
+    background: white;
+    margin: 40px;
+    display: flex;
+
+    .videos-home {
+
+        display: flex;
+
+        .video-s24 {
+            iframe {
+                width: 920px;
+                height: 100%;
+            }
+        }
+    }
+
+    .texto__parrafo2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        h2 {
+            font-size: 35px;
+            position: relative;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        p {
+            font-size: 1.3rem;
+            padding: 5px;
+            line-height: 55px;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            color: white;
+            background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+            text-align: center;
+            width: 200px;
+            margin: 20px auto;
+
+            &:hover {
+                background: linear-gradient(109.6deg, rgba(107, 106, 106, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+            }
+
+        }
+    }
+}
+
+.logos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    padding: 20px;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    position: relative;
+
+
+    h2 {
+        color: rgb(30, 30, 30);
+        font-size: 2rem;
+        font-weight: 900;
+
+    }
+
+    .img_logo {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        cursor: pointer;
+        position: relative;
+        padding: 15px;
+
+
+
+        .img_logos {
+            @include image (240px, 100%, contain);
+
+
+            display: flex;
+
+            border-radius: 10%;
+
+
+            z-index: 2;
+            padding: 10px;
+
+
+            opacity: 1;
+
+            &:hover {
+
+                filter: saturate(200%);
+
+                transition: .3s;
+            }
+        }
+    }
+}

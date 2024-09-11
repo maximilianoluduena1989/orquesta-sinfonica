@@ -1,0 +1,72 @@
+ .phone {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+
+
+     gap: 40px;
+     padding: 10px;
+     overflow: hidden;
+     justify-content: center;
+
+
+     .phone_card {
+         display: flex;
+         flex-direction: column;
+         background: $fondoProductoCard ;
+
+         border-radius: 10px;
+         overflow: hidden;
+
+         box-shadow: 0 4px 40px rgba(0, 0, 0, 0.14);
+         transition: transform 0.3s ease;
+         margin: 0 auto;
+
+
+         .imagen__phone {
+
+
+             @include image (100%, 70%, cover);
+         }
+
+         .phone__info {
+             padding: 15px;
+             flex: 1;
+             text-align: center;
+             @include display (column, center, center);
+
+
+
+
+             .phone_texto {
+                 font-size: $font-size;
+                 color: white;
+                 margin-bottom: 8px;
+             }
+
+             .parrafo {
+                 font-size: 1.2rem;
+                 color: #ffffff;
+                 margin-bottom: 12px;
+             }
+
+             .botton {
+                 background-color: $btnProductosBgr;
+                 color: $btnProductosText;
+                 border: none;
+                 padding: 8px 16px;
+                 font-size: 0.9rem;
+                 border-radius: 5px;
+
+                 cursor: pointer;
+                 transition: background-color .1s ease;
+
+                 &:hover {
+                     background-color: #e3e1e1;
+                     transition: .4s;
+
+
+                 }
+             }
+         }
+     }
+ }
